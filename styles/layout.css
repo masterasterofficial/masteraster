@@ -1,0 +1,817 @@
+/* Layout CSS - Improved Grid and Flexbox Layouts */
+
+/* Container and Base Structure */
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.section-content {
+    width: 100%;
+    max-width: 1400px;
+    padding: 5rem 3rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* ============================================
+   HERO SECTION
+============================================ */
+.hero-section {
+    background-color: #d4af37;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+    padding: 4rem 3rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.social-btn {
+    border: 2px solid #000000;
+    background-color: #000000;
+    padding: 1.25rem 3rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    min-width: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: left 0.5s;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   CONTENT BLOCKS - UNIFIED SYSTEM
+============================================ */
+.content-block,
+.feature-block,
+.vision-block,
+.culture-block,
+.manifesto-block,
+.community-block,
+.single-content-block {
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 3rem;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    position: relative;
+    transition: all 0.3s ease;
+    color: #000000;
+}
+
+.content-block:hover,
+.feature-block:hover,
+.vision-block:hover,
+.culture-block:hover,
+.manifesto-block:hover,
+.community-block:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: #d4af37;
+}
+
+/* ============================================
+   ABOUT SECTION
+============================================ */
+.about-section {
+    background-color: #111111;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.single-content-block {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    min-height: 250px;
+    padding: 4rem;
+}
+
+.single-content-block p {
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    color: #000000;
+}
+
+.single-content-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   FEATURES SECTION
+============================================ */
+.features-section {
+    background-color: #0a0a0a;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+    align-items: stretch;
+}
+
+/* ============================================
+   VISION SECTION
+============================================ */
+.vision-section {
+    background-color: #111111;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.vision-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 4rem;
+    align-items: stretch;
+}
+
+/* ============================================
+   CHARACTER SECTION
+============================================ */
+.character-section {
+    background-color: #0a0a0a;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.character-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-top: 4rem;
+    align-items: stretch;
+}
+
+.character-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 4rem;
+    transition: all 0.3s ease;
+}
+
+.character-left:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+}
+
+.character-logo {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    transition: all 0.3s ease;
+}
+
+.character-logo:hover {
+    opacity: 0.9;
+}
+
+.character-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+.character-text-block {
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    min-height: 120px;
+    transition: all 0.3s ease;
+    color: #000000;
+}
+
+.character-text-block:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: #d4af37;
+}
+
+/* ============================================
+   PHILOSOPHY SECTION
+============================================ */
+.philosophy-section {
+    background-color: #111111;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.philosophy-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+    align-items: stretch;
+}
+
+.philosophy-left,
+.philosophy-right {
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 4rem;
+    transition: all 0.3s ease;
+    color: #000000;
+}
+
+.philosophy-left:hover,
+.philosophy-right:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: #d4af37;
+}
+
+.philosophy-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.philosophy-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.philosophy-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 2.5rem;
+    color: #000000;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+}
+
+/* Legacy Section Title - Black */
+.legacy-section .section-title {
+    color: #000000 !important;
+}
+
+/* Transformation Section Title - Black */
+.transformation-section .section-title {
+    color: #000000 !important;
+}
+
+.philosophy-content p {
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.philosophy-quote p {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    text-align: center;
+}
+
+/* ============================================
+   CULTURE SECTION
+============================================ */
+.culture-section {
+    background-color: #0a0a0a;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+    align-items: stretch;
+}
+
+.culture-block {
+    min-height: 250px;
+}
+
+.culture-block h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+    color: #000000;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================
+   LEGACY SECTION
+============================================ */
+.legacy-section {
+    background-color: #111111;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.legacy-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+    align-items: stretch;
+}
+
+.legacy-content {
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.legacy-content:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: #d4af37;
+}
+
+.legacy-text p {
+    margin-bottom: 2.5rem;
+    color: #000000;
+}
+
+.legacy-symbol {
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.legacy-symbol:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: #d4af37;
+}
+
+.legacy-logo {
+    width: 100%;
+    height: 250px;
+  object-fit: fill;
+    margin-bottom: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.legacy-logo:hover {
+    opacity: 0.9;
+}
+
+.legacy-tagline p {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #000000;
+    margin: 0;
+}
+
+/* ============================================
+   MANIFESTO SECTION
+============================================ */
+.manifesto-section {
+    background-color: #0a0a0a;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.manifesto-layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.manifesto-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.manifesto-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #d4af37;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+.manifesto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+.manifesto-block {
+    min-height: 220px;
+}
+
+.manifesto-block h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+    color: #000000;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================
+   TRANSFORMATION SECTION
+============================================ */
+.transformation-section {
+    background-color: #111111;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.transformation-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+    align-items: stretch;
+}
+
+.transformation-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transformation-content {
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 4rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.transformation-content:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: #d4af37;
+}
+
+.transformation-text p {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: #000000;
+}
+
+.transformation-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transformation-symbol {
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 4rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.transformation-symbol:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: #d4af37;
+}
+
+.transformation-logo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.transformation-logo:hover {
+    opacity: 0.9;
+}
+
+.transformation-caption p {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+    color: #000000;
+}
+
+/* ============================================
+   COMMUNITY SECTION
+============================================ */
+.community-section {
+    background-color: #0a0a0a;
+    border-bottom: 3px solid rgba(212, 175, 55, 0.4);
+}
+
+.community-layout {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.community-description {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: #d4af37;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: #000000;
+}
+
+.community-description:hover {
+    transform: translateY(-2px);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: #d4af37;
+}
+
+.community-description p {
+    color: #000000;
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+.community-block {
+    min-height: 200px;
+}
+
+.community-block h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================
+   CTA SECTION
+============================================ */
+.cta-section {
+    background-color: #111111;
+}
+
+.cta-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+}
+
+.cta-message {
+    margin-top: 4rem;
+    padding: 3rem;
+    border: 2px solid #d4af37;
+    background: #d4af37;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    transition: all 0.3s ease;
+}
+
+.cta-message:hover {
+    transform: translateY(-2px);
+    border-color: #d4af37;
+    background: #d4af37;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+@media (max-width: 1200px) {
+    .section-content {
+        max-width: 1200px;
+        padding: 4rem 2.5rem;
+    }
+    
+    .hero-content {
+        padding: 3.5rem 2.5rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .section-content {
+        padding: 3.5rem 2rem;
+    }
+    
+    .hero-content {
+        padding: 3rem 2rem;
+    }
+    
+    .features-grid,
+    .vision-content,
+    .character-layout,
+    .philosophy-layout,
+    .culture-grid,
+    .legacy-layout,
+    .manifesto-grid,
+    .transformation-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .community-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .social-btn {
+        width: 250px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-content {
+        padding: 3rem 1.5rem;
+    }
+    
+    .hero-content {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .content-block,
+    .feature-block,
+    .vision-block,
+    .character-text-block,
+    .philosophy-left,
+    .philosophy-right,
+    .culture-block,
+    .legacy-content,
+    .legacy-symbol,
+    .manifesto-block,
+    .transformation-content,
+    .transformation-symbol,
+    .community-block,
+    .community-description,
+    .single-content-block {
+        padding: 2.5rem;
+        min-height: 150px;
+    }
+    
+    .character-logo,
+    .legacy-logo,
+    .transformation-logo {
+        height: 200px;
+    }
+    
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+    }
+    
+    .cta-message {
+        padding: 2.5rem;
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-content {
+        padding: 2.5rem 1rem;
+    }
+    
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+    
+    .content-block,
+    .feature-block,
+    .vision-block,
+    .character-text-block,
+    .philosophy-left,
+    .philosophy-right,
+    .culture-block,
+    .legacy-content,
+    .legacy-symbol,
+    .manifesto-block,
+    .transformation-content,
+    .transformation-symbol,
+    .community-block,
+    .community-description,
+    .single-content-block {
+        padding: 2rem;
+        min-height: 120px;
+    }
+    
+    .character-logo,
+    .legacy-logo,
+    .transformation-logo {
+        height: 150px;
+    }
+    
+    .social-btn {
+        min-width: 160px;
+        padding: 1rem 2rem;
+    }
+    
+    .cta-message {
+        padding: 2rem;
+        min-height: 80px;
+    }
+}

@@ -1,0 +1,173 @@
+/* Typography CSS - Fonts and Text Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
+
+/* Main Title */
+.main-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    text-shadow: 
+        2px 2px 0px rgba(0, 0, 0, 0.8),
+        4px 4px 0px rgba(212, 175, 55, 0.3);
+    line-height: 1.1;
+}
+
+/* Tagline */
+.tagline {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.tagline:not(.text-spawn) {
+    opacity: 0.9;
+}
+
+/* Hero Description */
+.hero-description {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d4af37;
+    text-shadow: 
+        1px 1px 0px rgba(0, 0, 0, 0.8),
+        2px 2px 0px rgba(212, 175, 55, 0.2);
+}
+
+/* Feature Block Titles */
+.feature-block h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    color: #000000;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* Paragraph Text */
+p {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 400;
+    line-height: 1.8;
+    color: #000000;
+    text-align: left;
+}
+
+.cta-text {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    text-align: center;
+    color: #d4af37;
+    margin-bottom: 2rem;
+}
+
+/* Social Button Text */
+.social-btn span {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #d4af37;
+}
+
+/* CTA Message */
+.cta-message span {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: #000000;
+    text-shadow: 
+        1px 1px 0px rgba(0, 0, 0, 0.8),
+        2px 2px 0px rgba(212, 175, 55, 0.3);
+}
+
+/* Text Alignment for Content Blocks */
+.content-block p,
+.vision-block p,
+.feature-block p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* All paragraph centering */
+p {
+    text-align: center;
+}
+
+/* Glitch Effect (subtle, static) */
+.main-title::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(212, 175, 55, 0.1);
+    z-index: -1;
+}
+
+.main-title::after {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(212, 175, 55, 0.1);
+    z-index: -1;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .main-title {
+        letter-spacing: 0.2em;
+    }
+    
+    .section-title {
+        letter-spacing: 0.15em;
+    }
+    
+    .tagline {
+        letter-spacing: 0.15em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        letter-spacing: 0.1em;
+    }
+    
+    .section-title {
+        letter-spacing: 0.1em;
+    }
+    
+    .tagline {
+        letter-spacing: 0.1em;
+    }
+}

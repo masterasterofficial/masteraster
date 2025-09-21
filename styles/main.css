@@ -1,0 +1,191 @@
+/* Main CSS - Global Styles and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #0a0a0a;
+    color: #d4af37;
+    overflow-x: hidden;
+}
+
+/* Hide scrollbars for all browsers */
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+body {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Section Base Styles */
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.section-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Content Blocks */
+.content-block,
+.feature-block,
+.vision-block {
+    background-color: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Text Selection */
+::selection {
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #d4af37;
+}
+
+::-moz-selection {
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #d4af37;
+}
+
+/* Text Spawn Animations - Only for text elements */
+@keyframes textSpawn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+/* Hide text content initially */
+.text-spawn,
+.text-spawn.tagline {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(2px);
+}
+
+/* Animate text when visible */
+.text-spawn.visible {
+    animation: textSpawn 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Loading Modal */
+.loading-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    overflow: hidden;
+}
+
+.loading-modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-content {
+    text-align: center;
+    padding: 3rem;
+}
+
+.modal-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    color: #d4af37;
+    text-shadow: 
+        2px 2px 0px rgba(0, 0, 0, 0.8),
+        4px 4px 0px rgba(212, 175, 55, 0.3);
+    margin-bottom: 2rem;
+}
+
+.modal-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: #d4af37;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+}
+
+.modal-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: #000000;
+    color: #d4af37;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    border: 2px solid #d4af37;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.modal-button:hover {
+    opacity: 0.8;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+    height: 100vh;
+}
