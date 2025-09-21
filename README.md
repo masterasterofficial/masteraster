@@ -1,4 +1,4 @@
-# MASTER ASTER
+# <div align="center"> MASTER ASTER
 
 <div align="center">
   <img src="https://res.cloudinary.com/dmipavrnm/image/upload/v1758434201/att.lVkCCjip5_N2CglE94MSP1jePmIJE_UR1KB5tLJqT2c_pdt5t3.jpg" alt="Master Aster" width="200">
