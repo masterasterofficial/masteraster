@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <a href="https://x.com/masteraster_" target="_blank">
+  <a href="https://x.com/MasterAsterBNB" target="_blank">
     <img src="https://img.shields.io/badge/Follow%20on%20X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Follow on X">
   </a>
 </div>
